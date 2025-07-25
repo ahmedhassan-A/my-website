@@ -1,0 +1,1011 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="إنشاء - تصاميم إبداعية تعكس هوية علامتك التجارية باحترافية وابتكار. اكتشف خدماتنا في تصميم الشعارات، الهوية البصرية، والسوشال ميديا.">
+    <meta name="keywords" content="تصميم شعارات, هوية بصرية, تصاميم سوشال ميديا, UI/UX, تصاميم مخصصة, إنشاء">
+    <meta name="author" content="إنشاء">
+    <title>إنشاء | تصاميمنا تتحدث عنا</title>
+    <link rel="icon" type="image/png" href="https://via.placeholder.com/32x32.png?text=إ">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(45deg, #40c4ff 0%, #ff1744 33%, #f06292 66%, #ffee58 100%);
+            --accent-color: #ffee58;
+            --secondary-color: #40c4ff;
+            --text-dark: #1a237e;
+            --text-light: #546e7a;
+            --shadow: 0 20px 40px rgba(0,0,0,0.1);
+            --border-radius: 20px;
+            --dark-bg: #0d1b2a;
+            --dark-text: #e0e0e0;
+            --dark-card-bg: #1b263b;
+            --service-bg-1: #e3f2fd;
+            --service-bg-2: #f3e5f5;
+            --service-bg-3: #e8f5e9;
+            --service-bg-4: #fff3e0;
+            --service-bg-5: #fce4ec;
+            --service-bg-6: #f1f8e9;
+            --service-bg-7: #e0f2f1;
+            --service-bg-8: #fff8e1;
+            --service-bg-9: #efebe9;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--primary-gradient);
+            background-attachment: fixed;
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background 0.3s, color 0.3s;
+        }
+        body.dark-mode {
+            background: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 20px 0;
+            transition: transform 0.3s ease;
+        }
+        body.dark-mode nav {
+            background: rgba(13,27,42,0.95);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: 'Times New Roman';
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+        body.dark-mode .nav-links a {
+            color: var(--dark-text);
+            }
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        .hamburger {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            background: none;
+            border: none;
+            color: var(--text-dark);
+        }
+        body.dark-mode .hamburger {
+            color: var(--dark-text);
+        }
+        /* Theme Toggle */
+        .theme-toggle {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-dark);
+            transition: color 0.3s ease;
+        }
+        body.dark-mode .theme-toggle {
+            color: var(--dark-text);
+        }
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            margin-top: 80px;
+        }
+        .hero-content h1 {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            font-weight: 700;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color), #ff1744);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeInUp 1s ease;
+        }
+        .hero-content p {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--text-light);
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease 0.2s both;
+        }
+        body.dark-mode .hero-content p {
+            color: #b0b0c0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            animation: fadeInUp 1s ease 0.4s both;
+            box-shadow: var(--shadow);
+        }
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 25px 50px rgba(255, 238, 88, 0.3);
+        }
+        /* Portfolio Gallery */
+        .portfolio {
+            padding: 100px 0;
+            background: white;
+            border-radius: var(--border-radius);
+            margin: 50px 20px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        body.dark-mode .portfolio {
+            background: var(--dark-card-bg);
+        }
+        .section-title {
+            text-align: center;
+            font-size: clamp(2rem, 5vw, 3rem);
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 0 20px;
+        }
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: var(--border-radius);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            aspect-ratio: 1/1;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+        }
+        .portfolio-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .portfolio-item:hover img {
+            transform: scale(1.1);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, transparent, rgba(64, 196, 255, 0.8));
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 20px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .portfolio-item:hover .portfolio-overlay {
+            opacity: 1;
+        }
+        .portfolio-overlay h3 {
+            color: white;
+            font-size: 1.5rem;
+        }
+        .portfolio-overlay p {
+            color: white;
+            font-size: 1rem;
+            margin-top: 5px;
+        }
+        /* Services */
+        .services {
+            padding: 100px 0;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            margin-top: 50px;
+        }
+        .service-card {
+            background: white;
+            padding: 25px 15px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: all 0.3s ease;
+            min-height: 220px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .service-card:nth-child(1) { background: var(--service-bg-1); }
+        .service-card:nth-child(2) { background: var(--service-bg-2); }
+        .service-card:nth-child(3) { background: var(--service-bg-3); }
+        .service-card:nth-child(4) { background: var(--service-bg-4); }
+        .service-card:nth-child(5) { background: var(--service-bg-5); }
+        .service-card:nth-child(6) { background: var(--service-bg-6); }
+        .service-card:nth-child(7) { background: var(--service-bg-7); }
+        .service-card:nth-child(8) { background: var(--service-bg-8); }
+        .service-card:nth-child(9) { background: var(--service-bg-9); }
+        
+        body.dark-mode .service-card {
+            background: var(--dark-card-bg);
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        .service-icon {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .service-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+        .service-card p {
+            font-size: 0.9rem;
+        }
+        /* Team Section */
+        .team {
+            background: white;
+            padding: 60px 20px;
+            border-radius: var(--border-radius);
+            margin: 50px 20px;
+        }
+        body.dark-mode .team {
+            background: var(--dark-card-bg);
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            padding: 0 20px;
+        }
+        .team-member {
+            text-align: center;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            background: #fff;
+            transition: all 0.5s ease;
+            position: relative;
+            opacity: 0;
+            transform: scale(0.8);
+        }
+        body.dark-mode .team-member {
+            background: var(--dark-card-bg);
+        }
+        .team-member:nth-child(1) { animation: zoomIn 0.6s ease 0.2s forwards; }
+        .team-member:nth-child(2) { animation: zoomIn 0.6s ease 0.4s forwards; }
+        .team-member:nth-child(3) { animation: zoomIn 0.6s ease 0.6s forwards; }
+        .team-member:nth-child(4) { animation: zoomIn 0.6s ease 0.8s forwards; }
+        .team-member:nth-child(5) { animation: zoomIn 0.6s ease 1.0s forwards; }
+        .team-member:hover {
+            transform: translateY(-5px) scale(1.05);
+            box-shadow: var(--shadow);
+        }
+        .team-member:hover img:not(.crown) {
+            animation: pulse 1.5s infinite;
+            transform: rotate(10deg) scale(1.1);
+        }
+        .team-member img:not(.crown) {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .crown {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 40px;
+            animation: spinCrown 4s linear infinite;
+        }
+        .team-member h3 {
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+        }
+        .team-member p {
+            color: var(--text-light);
+        }
+        body.dark-mode .team-member p {
+            color: #b0b0c0;
+        }
+        /* Contact */
+        .contact {
+            padding: 100px 0;
+            text-align: center;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+        body.dark-mode .contact-form {
+            background: var(--dark-card-bg);
+        }
+        .form-group {
+            margin-bottom: 30px;
+            text-align: right;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            font-family: inherit;
+            transition: all 0.3s ease;
+        }
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea {
+            background: #3a3a4e;
+            border-color: #555;
+            color: var(--dark-text);
+        }
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 3px rgba(255, 238, 88, 0.1);
+        }
+        .submit-btn {
+            background: linear-gradient(45deg, var(--secondary-color), var(--accent-color));
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(255, 238, 88, 0.3);
+        }
+        /* Social Buttons */
+        .whatsapp-btn, .facebook-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.3), 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: all 0.3s ease;
+            z-index: 1000;
+            text-decoration: none;
+            color: white;
+        }
+        .whatsapp-btn {
+            background: #25d366;
+            margin-bottom: 80px;
+        }
+        .facebook-btn {
+            background: #3b5998;
+        }
+        .whatsapp-btn:hover, .facebook-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5), 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        /* Footer */
+        footer {
+            background: white;
+            padding: 50px 0;
+            text-align: center;
+            margin-top: 100px;
+            border-radius: var(--border-radius) var(--border-radius) 0 0;
+        }
+        body.dark-mode footer {
+            background: var(--dark-card-bg);
+        }
+        .footer-content {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .social-links {
+            display: flex;
+            gap: 20px;
+            font-size: 1.5rem;
+        }
+        .social-links a {
+            color: var(--text-dark);
+            transition: all 0.3s ease;
+        }
+        body.dark-mode .social-links a {
+            color: var(--dark-text);
+        }
+        .social-links a:hover {
+            color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+        /* Animations */
+        @keyframes float {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes spinCrown {
+            0% { transform: translateX(-50%) rotate(0deg); }
+            100% { transform: translateX(-50%) rotate(360deg); }
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        /* Preloader */
+        .preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--primary-gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            transition: opacity 0.5s ease;
+        }
+        body.dark-mode .preloader {
+            background: var(--dark-bg);
+        }
+        .preloader.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        .loader {
+            width: 50px;
+            height: 50px;
+            border: 5px solid #f3f3f3;
+            border-top: 5px solid var(--accent-color);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 80px;
+                right: 0;
+                width: 100%;
+                background: rgba(255,255,255,0.95);
+                flex-direction: column;
+                padding: 20px;
+                text-align: center;
+            }
+            body.dark-mode .nav-links {
+                background: rgba(13,27,42,0.95);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            .services-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            .service-card {
+                padding: 20px 10px;
+                min-height: 180px;
+            }
+            .service-icon {
+                font-size: 1.5rem;
+            }
+            .service-card h3 {
+                font-size: 1rem;
+            }
+            .service-card p {
+                font-size: 0.8rem;
+            }
+            .team-grid {
+                grid-template-columns: 1fr;
+                padding: 0 10px;
+            }
+            .footer-content {
+                flex-direction: column;
+            }
+            .whatsapp-btn, .facebook-btn {
+                left: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <div class="logo">إنشاء</div>
+            <ul class="nav-links">
+                <li><a href="#hero">الرئيسية</a></li>
+                <li><a href="#portfolio">معرض الأعمال</a></li>
+                <li><a href="#services">خدماتنا</a></li>
+                <li><a href="#team">فريقنا</a></li>
+                <li><a href="#contact">تواصل معنا</a></li>
+            </ul>
+            <button class="hamburger" aria-label="فتح قائمة التنقل"><i class="fas fa-bars"></i></button>
+            <button class="theme-toggle" aria-label="تبديل الوضع" title="تبديل الوضع">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
+    </nav>
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <h1>تصاميمنا تتحدث عنا</h1>
+            <p>نحوّل أفكارك إلى واقع ملموس بتصاميم مبتكرة تعكس هوية علامتك</p>
+            <a href="#portfolio" class="cta-button">استكشف أعمالنا</a>
+        </div>
+    </section>
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2 class="section-title">معرض الأعمال <span style="color: var(--accent-color);">250+ تصميم</span></h2>
+            <div class="portfolio-grid">
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/bwcX1w5q/fc455e7c-12bd-44ad-aa1b-3f2bea0e4556.png" alt="شعار إبداعي" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>شعار إبداعي</h3>
+                        <p>تصميم شعار بسيط بألوان متناسقة يعكس الابتكار</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://cdn.qwenlm.ai/output/275a7ab0-d2b1-4931-9b93-c85ffa1e059d/t2i/47a144f2-eee9-4d0a-9bbb-e8efafd7f4d7/2a32521d-d129-4781-878a-cbd2c04ebff6.png?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyZXNvdXJjZV91c2VyX2lkIjoiMjc1YTdhYjAtZDJiMS00OTMxLTliOTMtYzg1ZmZhMWUwNTlkIiwicmVzb3VyY2VfaWQiOiIyYTMyNTIxZC1kMTI5LTQ3ODEtODc4YS1jYmQyYzA0ZWJmZjYiLCJyZXNvdXJjZV9jaGF0X2lkIjpudWxsfQ.hJVH7jk44wk7upWYBk-pIkO9vY7tOhbuc6eztF1A8nA" alt="هوية بصرية أنيقة" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>هوية بصرية أنيقة</h3>
+                        <p>نظام هوية بصرية هادئ يعكس الفخامة والاحترافية</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/5yY5vKZF/1ce871bb-1f86-40b8-b701-8ae91fcf2905.png" alt="بوست سوشال ميديا" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>بوست سوشال ميديا</h3>
+                        <p>تصميم منشور جذاب بألوان مبهجة لتعزيز التفاعل</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/1Xc8Q3fP/3bb88839-a2c0-49d9-b976-8a760307d57d.png" alt="بوستر ثقافي" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>بوستر ثقافي</h3>
+                        <p>تصميم بوستر هادئ ومميز لفعالية ثقافية تعكس الإبداع</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/9M2Y6BR6/583380e868dd9b32e26bdc4cc4366c2a.jpg" alt="واجهة تطبيق حديثة" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>واجهة تطبيق حديثة</h3>
+                        <p>تصميم واجهة مستخدم مريحة وسهلة الاستخدام لتطبيق موبايل</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/0y5KmBgX/20250725-202042.png" alt="غلاف كتاب مميز" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>غلاف كتاب مميز</h3>
+                        <p>تصميم غلاف كتاب بأسلوب هادئ يجذب القراء</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/fTBCNz4M/26d9b28a-c2aa-4835-b63a-b1b3b3575abe.png" alt="تصميم مخصص" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>تصميم مخصص</h3>
+                        <p>تصميم مخصص يجمع بين الأناقة والإبداع لعلامة تجارية فريدة</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://www.designfreelogoonline.com/wp-content/uploads/2018/07/Globe-Logo-template-free-online-logo-maker-and-download-500x644.webp" alt="تصميم علامة تجارية" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>تصميم علامة تجارية</h3>
+                        <p>تصميم شامل لعلامة تجارية تعكس الابتكار والتميز</p>
+                    </div>
+                </div>
+                <div class="portfolio-item">
+                    <img src="https://i.postimg.cc/QxXjn3ZQ/a8bc549f-3d28-4728-a63a-0e9f9514f0f4.png" alt="تصميم تغريدة" loading="lazy">
+                    <div class="portfolio-overlay">
+                        <h3>تصميم تغريدة</h3>
+                        <p>تصميم جذاب لمحتوى تفاعلي على منصة تويتر</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2 class="section-title">خدماتنا الإبداعية</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>تصميم الشعارات</h3>
+                    <p>شعارات فريدة تعكس هوية علامتك التجارية</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-id-card"></i>
+                    </div>
+                    <h3>الهوية البصرية</h3>
+                    <p>نظام متكامل للهوية البصرية لشركتك</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <h3>سوشال ميديا</h3>
+                    <p>تصاميم جذابة لحملات التواصل الاجتماعي</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h3>بوسترات وملصقات</h3>
+                    <p>تصاميم احترافية للفعاليات والحملات</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>تصاميم مخصصة</h3>
+                    <p>حلول إبداعية مخصصة للمؤثرين والشركات</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>UI/UX تصميم</h3>
+                    <p>تجربة مستخدم استثنائية لتطبيقاتك</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>فيديوهات تعريفية</h3>
+                    <p>إنتاج فيديوهات احترافية لشركتك</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-camera"></i>
+                    </div>
+                    <h3>تصوير احترافي</h3>
+                    <p>جلسة تصوير متميزة لمنتجاتك أو فريقك</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullhorn"></i>
+                    </div>
+                    <h3>تسويق رقمي</h3>
+                    <p>استراتيجيات تسويقية مبتكرة لتطوير عملك</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title fade-in-up">فريقنا المبدع</h2>
+            <div class="team-grid">
+                <div class="team-member">
+                    <i class="fas fa-crown crown"></i>
+                    <img src="https://img.btolat.com/2025/1/10/news/361490/large.jpg" alt="أحمد حسن">
+                    <h3>أحمد حسن</h3>
+                    <p>المدير التنفيذي</p>
+                    <p>📧 drmdhassan@gmail.com</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRpurhOXP7Q4e8N6zEBTzKp_VvDPFa5HKRj7J3YOTGiwtAGRITNKszRPT78jOoiK3Mxbek&usqp=CAU" alt="عبد الرحمن">
+                    <h3>عبد الرحمن</h3>
+                    <p>مدير الشركة</p>
+                    <p>📞 +968 78241181</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmDm4r8r51nAdtaYAEJ5t04njWMl-uRFJ0EQ&s" alt="أحمد عمار">
+                    <h3>أحمد عمار</h3>
+                    <p>المصمم الرئيسي</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGF42Gzvc0uqYK-zisqL6KYCc0RDLXPbBFFQ&s" alt="البراء البراشدي">
+                    <h3>البراء البراشدي</h3>
+                    <p>المصمم الأول</p>
+                </div>
+                <div class="team-member">
+                    <img src="https://i.pinimg.com/736x/ef/19/de/ef19de905a54ffa127d51e7eb3e1e693.jpg" alt="البراء حامد">
+                    <h3>البراء حامد</h3>
+                    <p>المدير التسويقي</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">تواصل معنا</h2>
+            <form class="contact-form" id="contactForm" action="https://formspree.io/f/mblkoger" method="POST">
+                <input type="hidden" name="_to" value="drmdhassan@gmail.com">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">الرسالة</label>
+                    <textarea id="message" name="message" rows="5" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">إرسال الرسالة</button>
+            </form>
+        </div>
+    </section>
+    <!-- Social Buttons -->
+    <a href="https://wa.me/01024459780" class="whatsapp-btn" target="_blank" aria-label="تواصل عبر واتساب">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=61578599136829&sk=friends_likes" class="facebook-btn" target="_blank" aria-label="تواصل عبر فيسبوك">
+        <i class="fab fa-facebook-f"></i>
+    </a>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="logo">إنشاء</div>
+                <div>
+                    <p>هاتف: 📞 +968 78241181</p>
+                    <p>بريد: drmdhassan@gmail.com</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://instagram.com/yourprofile" target="_blank" aria-label="إنستغرام"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/yourprofile" target="_blank" aria-label="تويتر"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=61578599136829" target="_blank" aria-label="فيسبوك"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://behance.net/yourprofile" target="_blank" aria-label="بيهانس"><i class="fab fa-behance"></i></a>
+                    <a href="https://dribbble.com/yourprofile" target="_blank" aria-label="دريبل"><i class="fab fa-dribbble"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Preloader
+        window.addEventListener('load', () => {
+            const preloader = document.querySelector('.preloader');
+            setTimeout(() => {
+                preloader.classList.add('hidden');
+            }, 1000);
+        });
+        // Theme Toggle
+        const themeToggle = document.querySelector('.theme-toggle');
+        themeToggle.addEventListener('click', () => {
+            document.body.classList.toggle('dark-mode');
+            const isDark = document.body.classList.contains('dark-mode');
+            themeToggle.innerHTML = `<i class="fas ${isDark ? 'fa-sun' : 'fa-moon'}">`;
+            localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        });
+        // Load saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark-mode');
+            themeToggle.innerHTML = '';
+        }
+        // Hamburger Menu
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        // Form handling with client-side validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            if (!name || !email || !message) {
+                alert('يرجى ملء جميع الحقول.');
+                return;
+            }
+            if (!emailRegex.test(email)) {
+                alert('يرجى إدخال بريد إلكتروني صحيح.');
+                return;
+            }
+            submitBtn.innerHTML = '<span class="loading"></span> جاري الإرسال...';
+            submitBtn.disabled = true;
+            fetch(this.action, {
+                method: 'POST',
+                body: new FormData(this),
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('شكراً لتواصلك معنا! سنرد عليك في أقرب وقت.');
+                    this.reset();
+                } else {
+                    alert('حدث خطأ، حاول مرة أخرى.');
+                }
+            })
+            .catch(() => alert('حدث خطأ، حاول مرة أخرى.'))
+            .finally(() => {
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
+        });
+        // Parallax effect (disabled on mobile) - تغيير اسم المتغير
+        window.addEventListener('scroll', () => {
+            if (window.innerWidth > 768) {
+                const scrolled = window.pageYOffset;
+                const hero = document.querySelector('.hero');
+                let parallaxValue = scrolled * 0.3; // اسم جديد للمتغير
+                hero.style.transform = `translateY(${parallaxValue}px)`;
+            }
+        });
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        document.querySelectorAll('.service-card, .team-member, .portfolio-item').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+        // Zoom effect for social buttons
+        const whatsappBtn = document.querySelector('.whatsapp-btn');
+        const facebookBtn = document.querySelector('.facebook-btn');
+        whatsappBtn.addEventListener('click', () => {
+            whatsappBtn.style.animation = 'zoom 0.5s ease';
+            setTimeout(() => {
+                whatsappBtn.style.animation = '';
+            }, 500);
+        });
+        facebookBtn.addEventListener('click', () => {
+            facebookBtn.style.animation = 'zoom 0.5s ease';
+            setTimeout(() => {
+                facebookBtn.style.animation = '';
+            }, 500);
+        });
+    </script>
+</body>
+</html>
